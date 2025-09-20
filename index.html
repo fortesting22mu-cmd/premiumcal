@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Sausage Calculator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="main-container">
+
+        <div class="header-section">
+            <div class="header-text">
+                <h2>What kind of sausage<br> do you want to buy ?</h2>
+                <p>And what price would you be willing to pay?</p>
+            </div>
+            <div class="header-image">
+                <img src="sausage_header.png" alt="Sausages">
+            </div>
+        </div>
+
+        <table class="prices-table">
+            <tr>
+                <td>Market price (4-5 sausage per pack)</td>
+                <td id="market-price-value" class="price-value">32.94 HKD</td>
+            </tr>
+            <tr>
+                <td>New price based on your preferences</td>
+                <td id="new-price-value" class="price-value">32.94 HKD</td>
+            </tr>
+        </table>
+
+        <div class="instructions-row">
+            <div class="instruction-arrow-cell">
+                <span class="arrow-icon">⬇️</span><br>
+                Select 1 per category
+            </div>
+            <div class="instruction-text-cell">
+                Below you can select different options (select only 1 in each category) to customize your sausage. Options include more sustainable production methods
+            </div>
+        </div>
+
+        <table class="category-table">
+            <thead>
+                <tr>
+                    <th class="input-col-header"></th>
+                    <th class="description-col-header" colspan="2">Breeding Practice</th>
+                    <th class="premium-value-col-header">Price Premium</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr data-premium="0.00">
+                    <td><input type="number" class="user-input" name="breeding"></td>
+                    <td colspan="2">Classical breeding on gridded floor (0.65m2 per pig)</td>
+                    <td class="premium-value-col"></td>
+                </tr>
+                <tr data-premium="0.38">
+                    <td><input type="number" class="user-input" name="breeding"></td>
+                    <td colspan="2">Classical on gridded floor without preventative antibiotics treatment</td>
+                    <td class="premium-value-col"></td>
+                </tr>
+                <tr data-premium="3.29">
+                    <td><input type="number" class="user-input" name="breeding"></td>
+                    <td colspan="2">Classical on gridded floor but with improved animal welfare, without preventative antibiotics treatment</td>
+                    <td class="premium-value-col"></td>
+                </tr>
+                <tr data-premium="5.93">
+                    <td><input type="number" class="user-input" name="breeding"></td>
+                    <td colspan="2">Breeding on straw , without preventative antibiotics treatment</td>
+                    <td class="premium-value-col"></td>
+                </tr>
+                <tr data-premium="21.45">
+                    <td><input type="number" class="user-input" name="breeding"></td>
+                    <td colspan="2">organic farming, breeding on straw with outdoor access, without preventative antibiotics treatment</td>
+                    <td class="premium-value-col"></td>
+                </tr>
+            </tbody>
+        </table>
+
+        <table class="category-table">
+            <thead>
+                <tr>
+                    <th class="input-col-header"></th>
+                    <th class="description-col-header" colspan="2">Salary of farmers</th>
+                    <th class="premium-value-col-header">Price Premium</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr data-premium="0.00">
+                    <td><input type="number" class="user-input" name="salary"></td>
+                    <td colspan="2">Alignment with market price of pork (not profitable)</td>
+                    <td class="premium-value-col"></td>
+                </tr>
+                <tr data-premium="1.79">
+                    <td><input type="number" class="user-input" name="salary"></td>
+                    <td colspan="2">Payment that allows the farmer not to lose money</td>
+                    <td class="premium-value-col"></td>
+                </tr>
+                <tr data-premium="2.92">
+                    <td><input type="number" class="user-input" name="salary"></td>
+                    <td colspan="2">Guaranteed payment that allows farmers to earn enough to live</td>
+                    <td class="premium-value-col"></td>
+                </tr>
+                <tr data-premium="3.76">
+                    <td><input type="number" class="user-input" name="salary"></td>
+                    <td colspan="2">Payment that allows farmers to pay themselves properly and maybe go on a short vaccaion once a year</td>
+                    <td class="premium-value-col"></td>
+                </tr>
+            </tbody>
+        </table>
+
+        <table class="category-table">
+            <thead>
+                <tr>
+                    <th class="input-col-header"></th>
+                    <th class="description-col-header" colspan="2">Ingredients: quality of the pieces used</th>
+                    <th class="premium-value-col-header">Price Premium</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr data-premium="0.00">
+                    <td><input type="number" class="user-input" name="iqp"></td>
+                    <td colspan="2">100% pure pork, the fattest pieces (shoulder, throat and cutting scraps)</td>
+                    <td class="premium-value-col"></td>
+                </tr>
+                <tr data-premium="2.92">
+                    <td><input type="number" class="user-input" name="iqp"></td>
+                    <td colspan="2">100% pure pork, intermediate pieces (palette, shoulder, cutting scraps)</td>
+                    <td class="premium-value-col"></td>
+                </tr>
+                <tr data-premium="5.83">
+                    <td><input type="number" class="user-input" name="iqp"></td>
+                    <td colspan="2">100% pure pork, finest cuts (ham, loin, shoulder, breast)</td>
+                    <td class="premium-value-col"></td>
+                </tr>
+            </tbody>
+        </table>
+
+        <table class="category-table">
+            <thead>
+                <tr>
+                    <th class="input-col-header"></th>
+                    <th class="description-col-header" colspan="2">Ingredients: Conservation</th>
+                    <th class="premium-value-col-header">Price Premium</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr data-premium="0.00">
+                    <td><input type="number" class="user-input" name="ic"></td>
+                    <td colspan="2">nitrates, nitrites allowed</td>
+                    <td class="premium-value-col"></td>
+                </tr>
+                <tr data-premium="1.22">
+                    <td><input type="number" class="user-input" name="ic"></td>
+                    <td colspan="2">without nitrates, nitrites, but with preservatives</td>
+                    <td class="premium-value-col"></td>
+                </tr>
+                <tr data-premium="5.27">
+                    <td><input type="number" class="user-input" name="ic"></td>
+                    <td colspan="2">without preservatives</td>
+                    <td class="premium-value-col"></td>
+                </tr>
+            </tbody>
+        </table>
+
+        <table class="category-table">
+            <thead>
+                <tr>
+                    <th class="input-col-header"></th>
+                    <th class="description-col-header" colspan="2">Ingredients: Hose type (embossing)</th>
+                    <th class="premium-value-col-header">Price Premium</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr data-premium="0.00">
+                    <td><input type="number" class="user-input" name="iht"></td>
+                    <td colspan="2">Synthetic vegetable gut</td>
+                    <td class="premium-value-col"></td>
+                </tr>
+                <tr data-premium="1.22">
+                    <td><input type="number" class="user-input" name="iht"></td>
+                    <td colspan="2">Reconstituted collagenous synthetic gut</td>
+                    <td class="premium-value-col"></td>
+                </tr>
+                <tr data-premium="3.67">
+                    <td><input type="number" class="user-input" name="iht"></td>
+                    <td colspan="2">Natural gut</td>
+                    <td class="premium-value-col"></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <script>
+        const MARKET_PRICE = 32.94;
+        const allInputs = document.querySelectorAll('.user-input');
+
+        function updateAllPrices() {
+            let totalPremium = 0;
+            allInputs.forEach(input => {
+                const row = input.closest('tr');
+                const premium = parseFloat(row.dataset.premium);
+                const value = parseFloat(input.value) || 0;
+                const calculatedPremium = value * premium;
+
+                const displayCell = row.querySelector('.premium-value-col');
+                if (displayCell) {
+                    displayCell.textContent = `${calculatedPremium.toFixed(2)} HKD`;
+                    totalPremium += calculatedPremium;
+                }
+            });
+
+            const newPrice = MARKET_PRICE + totalPremium;
+            document.getElementById('new-price-value').textContent = `${newPrice.toFixed(2)} HKD`;
+        }
+
+        allInputs.forEach(input => {
+            input.addEventListener('input', function() {
+                const categoryName = this.name;
+                
+                // Clear all other inputs in the same category
+                document.querySelectorAll(`input[name="${categoryName}"]`).forEach(otherInput => {
+                    if (otherInput !== this) {
+                        otherInput.value = '';
+                    }
+                });
+                
+                updateAllPrices();
+            });
+        });
+
+        // Initial update on page load
+        updateAllPrices();
+    </script>
+</body>
+</html>
